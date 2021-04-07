@@ -19,16 +19,16 @@
     </div>
     <template v-if="weatherData">
       <div class="col text-white text-center">
-        <div class="text-h4 text-weight-light">
+        <h4 class="text-h4 text-weight-light">
           {{ weatherData.name }}
-        </div>
-        <div class="text-h6 text-weight-light">
+        </h4>
+        <h6 class="text-h6 text-weight-light">
           {{ weatherData.weather[0].main }}
-        </div>
-        <div class="text-h1 text-weight-thin q-my-lg relative-position">
+        </h6>
+        <h1 class="text-h1 text-weight-thin q-my-lg relative-position">
           <span>{{ Math.round(weatherData.main.temp) }}</span>
           <span class="text-h4 relative-position degree">&deg;C</span>
-        </div>
+        </h1>
       </div>
 
       <div class="col text-center">
@@ -38,9 +38,9 @@
 
     <template v-else>
       <div class="col column text-center text-white">
-        <div class="col text-h2 text-weight-thin">
+        <h2 class="col text-h2 text-weight-thin">
           Weather
-        </div>
+        </h2>
         <q-btn @click="getLocation" class="col" flat>
           <q-icon left size="3em" name="my_location"/>
           <div>Find my location</div>
